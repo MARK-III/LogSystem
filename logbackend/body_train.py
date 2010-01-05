@@ -27,6 +27,7 @@ def getResponse(request):
 	    resistance = record['resistance']
 	    repitation = record['repitation']
 	    date = record['date']
+            tagid = record['tagid']
 	    uid = str(uuid1())
 	
 	    data = (uid,exercise_id,catalog_id,resistance,repitation,date,time)
@@ -41,7 +42,8 @@ def getResponse(request):
                            'resistance': resistance,
                            'repetition': repitation,
                            'date': date,
-                           'uuid': uid
+                           'uuid': uid,
+			   'tagid': tagid
                            }
             records_list.append(record_dict)
     result_dict = { 'records': records_list}
