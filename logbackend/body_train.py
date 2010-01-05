@@ -13,7 +13,7 @@ from translator import catalog2uid, exercise2uid
 def getResponse(request):
 
     body = request.get_json(force = True, silent = True)
-    date = body['date']
+    #date = body['date']
     time = datetime.now()
     records_list = []
     for record in body['records']:
@@ -26,6 +26,7 @@ def getResponse(request):
 	    exercise_id = exercise2uid(exercise, catalog)
 	    resistance = record['resistance']
 	    repitation = record['repitation']
+	    date = record['date']
 	    uid = str(uuid1())
 	
 	    data = (uid,exercise_id,catalog_id,resistance,repitation,date,time)
