@@ -2,6 +2,8 @@
 Table Master
 id name age gender weight height email encryped_password
 
+Create table for each user
+
 Table Anaerobic exercise name convention
 id type name
 
