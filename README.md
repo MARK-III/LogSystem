@@ -1,7 +1,8 @@
 #### LogSystem
 ####Database structure
+Database scheme will be added later  
+test  
 ####API
-
 **POST**	`/body/train`	Record training
 ```
 {
