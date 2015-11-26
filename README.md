@@ -15,9 +15,9 @@
 ```
 Request parameters
 
-name	xsd:string
-weight	xsd:int
-times	xsd:int
+name|xsd:string
+weight|xsd:int
+times|xsd:int
 ```
 {
 	"status": "recorded",
@@ -29,8 +29,8 @@ times	xsd:int
 ```
 Response parameters
 
-status	xsd:string
-weight	xsd:int
-times	xsd:int
-created_at	xsd:dataTime
-id	xsd:int	
+status|xsd:string
+weight|xsd:int
+times|xsd:int
+created_at|xsd:dataTime
+id|xsd:int	
