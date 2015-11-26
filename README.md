@@ -14,7 +14,8 @@
 }
 ```
 Request parameters
-
+Parameter|Type
+------|------
 name|xsd:string
 weight|xsd:int
 times|xsd:int
@@ -28,7 +29,8 @@ times|xsd:int
 }
 ```
 Response parameters
-
+Parameter|Type
+------|------
 status|xsd:string
 weight|xsd:int
 times|xsd:int
