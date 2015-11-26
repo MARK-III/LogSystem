@@ -10,8 +10,6 @@
 	"times": 8
 }
 ```
-Request parameters
-
 Parameter | Type
 ------------ | -------------
 name | xsd:string
@@ -28,8 +26,6 @@ id | xsd:int
 	"id": 1
 }
 ```
-Response parameters
-
 Parameter | Type
 ------------ | -------------
 status | xsd:string
