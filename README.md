@@ -1,11 +1,8 @@
-## LogSystem
-##Database structure
+#### LogSystem
+####Database structure
+####API
 
-
-
-##API
-
-####POST	/body/train	Record training
+**POST**	`/body/train`	Record training
 ```
 {
 	"name": "Dead lift",
@@ -15,7 +12,7 @@
 ```
 Request parameters
 Parameter|Type
-------|------
+---------|----------
 name|xsd:string
 weight|xsd:int
 times|xsd:int
@@ -30,7 +27,7 @@ times|xsd:int
 ```
 Response parameters
 Parameter|Type
----------|----
+----------|----------
 status|xsd:string
 weight|xsd:int
 times|xsd:int
