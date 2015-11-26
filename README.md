@@ -11,11 +11,14 @@
 }
 ```
 Request parameters
-Parameter|Type
----------|----------
-name|xsd:string
-weight|xsd:int
-times|xsd:int
+
+Parameter | Type
+------------ | -------------
+name | xsd:string
+weight | xsd:int
+times | xsd:int
+created_at | xsd:dataTime
+id | xsd:int
 ```
 {
 	"status": "recorded",
@@ -26,10 +29,12 @@ times|xsd:int
 }
 ```
 Response parameters
-Parameter|Type
-----------|----------
-status|xsd:string
-weight|xsd:int
-times|xsd:int
-created_at|xsd:dataTime
-id|xsd:int	
+
+Parameter | Type
+------------ | -------------
+status | xsd:string
+name | xsd:string
+weight | xsd:int
+times | xsd:int
+created_at | xsd:dataTime
+id | xsd:int
