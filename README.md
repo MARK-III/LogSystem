@@ -5,20 +5,20 @@
 
 ##API
 
-###POST	/body/train	Record training
-'''
+####POST	/body/train	Record training
+```
 {
 	"name": "Dead lift",
 	"weight": 30,
 	"times": 8
 }
-'''
-###Request parameters
+```
+Request parameters
 
 name	xsd:string
 weight	xsd:int
 times	xsd:int
-'''
+```
 {
 	"status": "recorded",
 	"name": "Dead lift",
@@ -26,8 +26,8 @@ times	xsd:int
 	"created_at": "2015-11-27T00:12:55Z",
 	"id": 1
 }
-'''
-###Response parameters
+```
+Response parameters
 
 status	xsd:string
 weight	xsd:int
