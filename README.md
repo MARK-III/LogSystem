@@ -1,11 +1,11 @@
 # LogSystem
-Database structure
+#Database structure
 
 
 
-API
+#API
 
-POST	/body/train	Record training
+##POST	/body/train	Record training
 
 {
 	"name": "Dead lift",
@@ -13,7 +13,7 @@ POST	/body/train	Record training
 	"times": 8
 }
 
-Request parameters
+##Request parameters
 
 name	xsd:string
 weight	xsd:int
@@ -27,7 +27,7 @@ times	xsd:int
 	"id": 1
 }
 
-Response parameters
+##Response parameters
 
 status	xsd:string
 weight	xsd:int
