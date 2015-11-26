@@ -3,7 +3,7 @@
 Database scheme will be added later  
 test  
 ####API
-**POST**	`/body/train`	Record training
+**POST**        `/body/train`        Record training
 ```
 {
 	"name": "Dead lift",
