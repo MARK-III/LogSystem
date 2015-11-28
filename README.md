@@ -1,8 +1,9 @@
 #### LogSystem
 ####Database structure
 table main  
-id | name | wight | times | created\_at
--------- | ---------- | ----------- | ---------- | -------------
+
+id | name | wight | times | created_at 
+-------- | ---------- | -------- | -------- | ----------
 int | string | int | int | dataTime
 ####API
 **POST**`/body/train`  
