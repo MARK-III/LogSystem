@@ -1,7 +1,9 @@
 #### LogSystem
 ####Database structure
-Database scheme will be added later  
-test  
+table main  
+id | name | wight | times | created\_at |  
+-- | ---- | ----- | ----- | ----------- |  
+int | string | int | int | dataTime |  
 ####API
 **POST**`/body/train`  
 Add a training record  
