@@ -4,7 +4,7 @@ table main
 
 id | name | wight | times | created_at 
 -------- | ---------- | -------- | -------- | ----------
-int | string | int | int | dataTime
+int | string | int | int | dateTime
 ####API
 **POST**`/body/train`  
 Add a training record  
