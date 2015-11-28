@@ -3,6 +3,7 @@ from flask import Flask
 from flask import request
 from flask import jsonify
 import json
+import backend
 
 app = Flask(__name__)
 
@@ -14,8 +15,8 @@ def index():
 def train():
     if request.method == 'POST':
         content = request.get_json(force=True,silent=True)
-        #parsed_content = json.loads(content)
-        return jsonify(content) 
+        backend.post_train(content)
+	return jsonify(content) 
     else:
         return jsonify(status="recorded",
 		       name="Dead lift",

@@ -1,5 +1,6 @@
+DROP TABLE main;
 CREATE TABLE main (
-id integer primary key,
+uuid varchar(36),
 name varchar(30),
 weight integer,
 times integer,
