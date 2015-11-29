@@ -11,6 +11,7 @@ Add a training record
 ```
 {
 	"name": "Dead lift",
+	"type": "back",
 	"weight": 30,
 	"times": 8
 }
@@ -18,24 +19,26 @@ Add a training record
 Parameter | Type
 ------------ | -------------
 name | xsd:string
+type | xsd:string
 weight | xsd:int
 times | xsd:int
-created_at | xsd:dataTime
-id | xsd:int
 ```
 {
 	"status": "recorded",
 	"name": "Dead lift",
+	"type": "back",
 	"weight": 30,
+	"times": 8,
 	"created_at": "2015-11-27T00:12:55Z",
-	"id": 1
+	"uuid": xxxx
 }
 ```
 Parameter | Type
 ------------ | -------------
 status | xsd:string
 name | xsd:string
+type | xsd:string
 weight | xsd:int
 times | xsd:int
 created_at | xsd:dataTime
-id | xsd:int
+uuid | xsd:string
