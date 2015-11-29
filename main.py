@@ -2,18 +2,23 @@ import sqlite3
 import uuid
 import backend
 from datetime import datetime
+import json
+from flask import jsonify
 
-uid = str(uuid.uuid1())
-name = 'Dead lift'
+name = 'Dear lift'
+part = 'back'
 weight = 30
 times = 8
-datetime = str(datetime.now())
-t = (uid,name,weight,times,datetime,)
-print(t)
-conn = sqlite3.connect('test.db')
-c = conn.cursor()
+date_time = '2015-11-27T00:12:55Z'
+uuid = 'xxxx'
 
-c.execute('INSERT INTO main VALUES(?,?,?,?,?)',t)
-conn.commit()
-conn.close()
+json_dict = {'name': name,
+             'part': part,
+             'weight': weight,
+             'times': times,
+             'date_time': date_time,
+             'uuid': uuid}
+
+response = json.JSONEncoder().encode(json_dict)
+print(response)
 

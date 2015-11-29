@@ -15,13 +15,11 @@ def index():
 def train():
     if request.method == 'POST':
         content = request.get_json(force=True,silent=True)
-        backend.post_train(content)
-	return jsonify(content) 
+	reply = backend.post_train(content)
+	return jsonify(reply)
     else:
-        return jsonify(status="recorded",
-		       name="Dead lift",
-                       weight=30,
-                       created_at="2015-11-27T00:12:55Z")
+	reply = backend.get_train()
+	return jsonify(**reply)
 
 if __name__ == '__main__':
     app.debug = True
