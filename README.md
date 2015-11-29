@@ -1,5 +1,6 @@
 #### LogSystem
 ####Database structure
+~~test~~  
 table main  
 
 id | name | part | wight | times | created_at 
@@ -24,18 +25,16 @@ weight | xsd:int
 times | xsd:int
 ```
 {
-	"status": "recorded",
 	"name": "Dead lift",
 	"part": "back",
 	"weight": 30,
 	"times": 8,
-	"created_at": "2015-11-27T00:12:55Z",
-	"uuid": xxxx
+	"created_at": "2015-11-29 15:51:28.942323",
+	"uuid": "0dca7d12-96b1-11e5-99ca-024d03c2f759"
 }
 ```
 Parameter | Type
 ------------ | -------------
-status | xsd:string
 name | xsd:string
 part | xsd:string
 weight | xsd:int
