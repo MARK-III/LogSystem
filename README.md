@@ -1,6 +1,8 @@
 #### LogSystem
 ####Database structure
 ~~test~~  
+Add 组数，年月日，但是分条记录  
+返回值add 动作名+部位名+时间  
 table main  
 
 id | name | part | wight | times | created_at 
