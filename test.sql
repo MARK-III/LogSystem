@@ -1,21 +1,23 @@
 DROP TABLE main;
 CREATE TABLE main (
-uuid varchar(36),
-name varchar(30),
-part varchar(30),
-weight integer,
-times integer,
-created_at text
+record_id varchar(36),
+exercise_id varchar(30),
+catalog_id varchar(30),
+resistance integer,
+repetition integer,
+group integer,
+date varchar(10),
+created_at varchar(50),
 );
-DROP TABLE action;
-CREATE TABLE action (
+DROP TABLE exercise;
+CREATE TABLE exercise (
 uuid varchar(36),
-name varchar(30),
-part varchar(36)
+name varchar(50),
+catalog_id varchar(36)
 );
-DROP TABLE part;
-CREATE TABLE part (
-uuid varchar(36),
-name varchar(30),
+DROP TABLE catalog;
+CREATE TABLE catalog (
+catalog_id varchar(36),
+name varchar(50),
 );
 
