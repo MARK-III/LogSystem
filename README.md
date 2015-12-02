@@ -12,7 +12,7 @@ int | uuid | uuid | uuid | int | int | group | date | datetime
 Examples:  
 The unit of resistance is gram  
 The format of date is : 2015-12-03  
-The format of created\at is not decided  
+The format of created\_at is not decided  
 
 Table exercise:
 
@@ -61,7 +61,7 @@ Body:
 					"name": "哑铃俯身划船",
 					"uuid": "de305d54-75b4-431b-adb2-eb6b9e546014"
 				}，
-				{
+				{	
 					"name": "史密斯机俯身划船",
 					"uuid": "de305d54-75b4-431b-adb2-eb6b9e546014"
 				}
@@ -88,43 +88,61 @@ Body:
 	]
 }
 ```
-**POST**`/body/train`  
+
 Add a training record
+
+**POST**`/body/train`  
+
 Request:  
 Header:`?`  
 Body:  
 ```
 {
-	"name": "Dead lift",
-	"part": "back",
-	"weight": 30,
-	"times": 8
+	"date": "2015-12-03",
+	[
+		{
+			"exercise": "硬拉",
+			"catalog": "背部",
+			"resistance": 30,
+			"repitation": 8,
+			"group": 4
+		},
+		{
+			"exercise": "硬拉",
+			"catalog": "背部",
+			"resistance": 30,
+			"repitation": 8,
+			"group": 4
+		}
+	]
+
 }
 ```
-Parameter | Type
------------- | -------------
-name | xsd:string
-part | xsd:string
-weight | xsd:int
-times | xsd:int
 Response:  
 Header:`?`  
 Body:  
 ```
 {
-	"name": "Dead lift",
-	"part": "back",
-	"weight": 30,
-	"times": 8,
-	"created_at": "2015-11-29 15:51:28.942323",
-	"uuid": "0dca7d12-96b1-11e5-99ca-024d03c2f759"
+	[
+		{
+			"exercise": "硬拉",
+			"catalog": "背部",
+			"resistance": 30,
+			"repitation": 8,
+			"group": 4,
+			"date": "2015-12-03",
+			"uuid": "0dca7d12-96b1-11e5-99ca-024d03c2f759"
+		},
+		{
+			"exercise": "硬拉",
+			"catalog": "背部",
+			"resistance": 30,
+			"repitation": 8,
+			"group": 4,
+			"date": "2015-12-03",
+			"uuid": "0dca7d12-96b1-11e5-99ca-024d03c2f759"
+		}
+	]
 }
 ```
-Parameter | Type
------------- | -------------
-name | xsd:string
-part | xsd:string
-weight | xsd:int
-times | xsd:int
-created_at | xsd:dataTime
-uuid | xsd:string
+
