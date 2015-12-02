@@ -1,13 +1,20 @@
 #### LogSystem
-####Database structure
-~~test~~  
+~~test~~ 
 Add 组数，年月日，但是分条记录  
-返回值add 动作名+部位名+时间  
-table main  
+返回值add 动作名+部位名+时间
+####Database structure
 
-id | name | part | wight | times | created_at 
--------- | ---------- | ---------- | -------- | -------- | ----------
-int | string | string | int | int | dateTime
+Table main:  
+
+id | record\_id | exercise\_id | catalog\_id | resistance | repetition | group | date | created\_at 
+----- | ----- | ------------ | ----------- | ---------- | ---------- | ----- | -----| -----------
+int | uuid | uuid | uuid | int | int | group | date | datetime
+Examples:  
+The unit of resistance is gram  
+The format of date is : 2015-12-03  
+The format of created\at is not decided  
+
+
 ####API
 **GET**`/body/train`
 Get training record(s)  
