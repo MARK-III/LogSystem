@@ -33,7 +33,7 @@ Get training record(s)
 **GET**`/body/train`
 
 Request:  
-Header:`date : 2015-12-03`
+Header:`date : 2015-12-03`  
 Response:  
 Body:  
 ```
