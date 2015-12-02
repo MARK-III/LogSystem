@@ -9,8 +9,20 @@ id | name | part | wight | times | created_at
 -------- | ---------- | ---------- | -------- | -------- | ----------
 int | string | string | int | int | dateTime
 ####API
+**GET**`/body/train`
+Get training record(s)  
+Request:  
+Header:`?`
+Response:  
+Body:  
+```
+
+```
 **POST**`/body/train`  
-Add a training record  
+Add a training record
+Request:  
+Header:`?`  
+Body:  
 ```
 {
 	"name": "Dead lift",
@@ -25,6 +37,9 @@ name | xsd:string
 part | xsd:string
 weight | xsd:int
 times | xsd:int
+Response:  
+Header:`?`  
+Body:  
 ```
 {
 	"name": "Dead lift",
