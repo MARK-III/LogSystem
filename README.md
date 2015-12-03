@@ -1,6 +1,6 @@
 #### LogSystem
 ####Database scheme
-
+结构，数据分开，读取input放在链接中  
 Table main:  
 
 id | record\_id | exercise\_id | catalog\_id | resistance | repetition | group | date | created\_at 
