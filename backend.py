@@ -3,10 +3,10 @@ import uuid
 import sqlite3
 from datetime import datetime
 
-def post_train(content):
-    
+def post_body_train(header,body):
+
     uid = str(uuid.uuid1())
-    name = 'Dead lift'
+    exercise = 'dd'
     part = 'back'
     weight = 30
     times = 8
@@ -27,7 +27,7 @@ def post_train(content):
 		 'uuid': uid}
     return json_dict
 
-def get_train():
+def get_body_train(header):
     
     name = 'Dear lift'
     part = 'back'

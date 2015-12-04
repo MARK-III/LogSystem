@@ -13,13 +13,17 @@ def index():
 
 @app.route('/body/train', methods=['POST','GET'])
 def train():
-    if request.method == 'POST':
-        content = request.get_json(force=True,silent=True)
-	reply = backend.post_train(content)
-	return jsonify(reply)
+
+    if (request.method == 'POST'):
+	
+    	header = request.headers
+    	body = request.post_body_json(force=True,silent=True)
+    	reply = backend.post_train(header='',body)
+    	return jsonify(reply)
     else:
-	reply = backend.get_train()
-	return jsonify(**reply)
+	header = request.headers
+	reply = backend.get_body__train(header='')
+	return jsonify(reply)
 
 if __name__ == '__main__':
     app.debug = True
