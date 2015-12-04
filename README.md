@@ -23,3 +23,9 @@ Table catalog:
 id | catalog\_id | name
 ---- | ---- | ----
 int | uuid | string
+
+Table user:  
+
+id | user\_id | name | password
+---- | ---- | ---- | ----
+int | uuid | string | string
