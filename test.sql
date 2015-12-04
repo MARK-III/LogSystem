@@ -8,7 +8,7 @@ resistance integer,
 repetition integer,
 groups integer,
 date varchar(10),
-created_at varchar(50),
+created_at varchar(50)
 );
 
 DROP TABLE exercise;
@@ -23,7 +23,7 @@ DROP TABLE catalog;
 
 CREATE TABLE catalog (
 catalog_id varchar(36),
-name varchar(50),
+name varchar(50)
 );
 
 DROP TABLE user;
@@ -31,6 +31,6 @@ DROP TABLE user;
 CREATE TABLE user (
 user_id varchar(36),
 name varchar(50),
-password string,
+password string
 );
 
