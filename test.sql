@@ -20,4 +20,10 @@ CREATE TABLE catalog (
 catalog_id varchar(36),
 name varchar(50),
 );
+DROP TABLE user;
+CREATE TABLE user (
+user_id varchar(36),
+name varchar(50),
+password string,
+);
 
