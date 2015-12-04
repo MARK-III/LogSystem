@@ -87,7 +87,6 @@ Body:
 			"groups": 4
 		}
 	]
-
 }
 ```
 Response:  
