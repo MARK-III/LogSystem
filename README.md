@@ -1,4 +1,5 @@
-#### LogSystem
+#### LogSystem  
+The design procedure should be database --> api --> program
 ####Database scheme
 结构，数据分开，读取input放在链接中  
 Table main:  
