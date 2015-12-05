@@ -14,7 +14,7 @@ Body:
 		{
 			“name": "胸部",
 			"uuid": "de305d54-75b4-431b-adb2-eb6b9e546014",
-			[
+			"excersice": [
 				{
 					"name": "卧推",
 					"uuid": "de305d54-75b4-431b-adb2-eb6b9e546014"
@@ -28,7 +28,7 @@ Body:
 		{
 			“name": "背部",
 			"uuid": "de305d54-75b4-431b-adb2-eb6b9e546014",
-			[
+			"excersice": [
 				{
 					"name": "哑铃俯身划船",
 					"uuid": "de305d54-75b4-431b-adb2-eb6b9e546014"
@@ -71,7 +71,7 @@ Body:
 ```
 {
 	"date": "2015-12-03",
-	[
+	"records": [
 		{
 			"exercise": "硬拉",
 			"catalog": "背部",
@@ -94,7 +94,7 @@ Header:`?`
 Body:  
 ```
 {
-	[
+	"records": [
 		{
 			"exercise": "硬拉",
 			"catalog": "背部",
