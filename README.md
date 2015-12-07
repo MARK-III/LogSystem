@@ -1,7 +1,17 @@
 #### LogSystem  
 The design procedure should be database --> api --> program
+####API Index
+    post /body/train/
+    Add records to database
+    get /body/train/<date>
+    Fetch records from database
+    delete /body/train/<uuid>
+    delete record from database
+    get /body/calender
+    Fetch training calender
+    get /body/catalog
+    Fetch catalog information
 ####Database scheme
-结构，数据分开，读取input放在链接中  
 Table main:  
 
 id | record\_id | exercise\_id | catalog\_id | resistance | repetition | group | date | created\_at 
