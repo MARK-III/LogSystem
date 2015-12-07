@@ -3,8 +3,10 @@ from flask import Flask
 from flask import request
 from flask import jsonify
 from flask import redirect
+from flask import url_for
 import json
 import backend
+import logbackend
 
 app = Flask(__name__)
 
@@ -22,9 +24,11 @@ def train():
     	reply = backend.post_train(body)
     	return jsonify(reply)
     else:
-	header = request.headers
-	reply = backend.get_body_train()
-	return jsonify(reply)
+	return redirect(url_for('get_records'))
+
+@app.route('/body/records', methods=['GET'])
+def get_records():
+    return logbackend.body_records.getResponse(request)
 
 if __name__ == '__main__':
     app.debug = True
