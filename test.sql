@@ -6,7 +6,6 @@ exercise_id varchar(30),
 catalog_id varchar(30),
 resistance integer,
 repetition integer,
-groups integer,
 date varchar(10),
 created_at varchar(50)
 );
