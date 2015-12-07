@@ -17,18 +17,16 @@ def index():
 @app.route('/body/train', methods=['POST','GET'])
 def train():
 
-    if (request.method == 'POST'):
-	
-    	header = request.headers
-    	body = request.get_json(force=True,silent=True)
-    	reply = backend.post_train(body)
-    	return jsonify(reply)
+    if (request.method == 'POST'):	
+	return logbackend.body_train.getResponse(request)
     else:
-	return redirect(url_for('get_records'))
+	reply = backend.get_body_train()
+	return jsonify(reply)
+	
 
-@app.route('/body/records', methods=['GET'])
-def get_records():
-    return logbackend.body_records.getResponse(request)
+@app.route('/body/records/<date>', methods=['GET'])
+def get_records(date):
+    return logbackend.body_records.getResponse(request,date)
 
 if __name__ == '__main__':
     app.debug = True

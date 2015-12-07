@@ -1,30 +1,27 @@
 import json
-import uuid
 import sqlite3
 from datetime import datetime
 from flask import request
 from flask import jsonify
+from flask import json
 
-def getResponse(request):
-    
-    dict1 = {
-                "excercise": "Dead Lift",
-		"catalog": "Back",
-		"resistance": 30,
-		"repitation": 8,
-		"group": 4,
-		"date": "2015-12-03",
-		"uuid": "0dca7d12-96b1-11e5-99ca-024d03c2f759"
-	    }
-    dict2 = {
-                "excercise": "Dead Lift",
-                "catalog": "Back",
-                "resistance": 30,
-                "repitation": 8,
-                "group": 4,
-                "date": "2015-12-03",
-                "uuid": "0dca7d12-96b2-11e5-99ca-024d03c2f759"
-            }
-    array1 = [dict1,dict2]
-    json_dict = {'records': array1}
-    return jsonify(json_dict)
+def getResponse(request,date):
+   
+    connection = sqlite3.connect('/home/linaro/LogSystem/test.db')
+    cur = connection.cursor()
+    result = cur.execute("SELECT exercise_id,catalog_id,resistance,repetition,date,record_id from main where date = '%s'" % date)
+    records_list = []
+    for row in result:
+
+	record_dict = {
+		       'exercise': row[0],
+		       'catalog': row[1],
+                       'resistance': row[2],
+		       'repetition': row[3],
+		       'date': row[4],
+	               'record_id': row[5]
+		       }
+	records_list.append(record_dict)
+    result_dict = { 'records': records_list}	 
+    return jsonify(result_dict)
+
