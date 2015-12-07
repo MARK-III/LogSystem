@@ -3,9 +3,9 @@ The design procedure should be database --> api --> program
 ####API Index
     post /body/train/
     Add records to database
-    get /body/train/<date>
+    get /body/records/<date>
     Fetch records from database
-    delete /body/train/<uuid>
+    delete /body/record/<uuid>
     delete record from database
     get /body/calender
     Fetch training calender
@@ -14,8 +14,8 @@ The design procedure should be database --> api --> program
 ####Database scheme
 Table main:  
 
-id | record\_id | exercise\_id | catalog\_id | resistance | repetition | group | date | created\_at 
------ | ----- | ------------ | ----------- | ---------- | ---------- | ----- | -----| -----------
+id | record\_id | exercise\_id | catalog\_id | resistance | repetition | date | created\_at 
+----- | ----- | ------------ | ----------- | ---------- | ---------- | -----| -----------
 int | uuid | uuid | uuid | int | int | group | date | datetime
 Examples:  
 The unit of resistance is gram  
