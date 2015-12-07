@@ -3,7 +3,7 @@ import uuid
 import sqlite3
 from datetime import datetime
 
-def post_body_train(header,body):
+def post_body_train(body):
 
     uid = str(uuid.uuid1())
     exercise = 'dd'
@@ -27,19 +27,26 @@ def post_body_train(header,body):
 		 'uuid': uid}
     return json_dict
 
-def get_body_train(header):
+def get_body_train():
     
-    name = 'Dear lift'
-    part = 'back'
-    weight = 30
-    times = 8
-    date_time = '2015-11-27T00:12:55Z'
-    uuid = 'xxxx'
-    json_dict = {'name': name,
-		 'part': part,
-		 'weight': weight,
-		 'times': times,
-		 'date_time': date_time,
-		 'uuid': uuid}
-    
+    dict1 = {
+                "excercise": "Dead Lift",
+		"catalog": "Back",
+		"resistance": 30,
+		"repitation": 8,
+		"group": 4,
+		"date": "2015-12-03",
+		"uuid": "0dca7d12-96b1-11e5-99ca-024d03c2f759"
+	    }
+    dict2 = {
+                "excercise": "Dead Lift",
+                "catalog": "Back",
+                "resistance": 30,
+                "repitation": 8,
+                "group": 4,
+                "date": "2015-12-03",
+                "uuid": "0dca7d12-96b2-11e5-99ca-024d03c2f759"
+            }
+    array1 = [dict1,dict2]
+    json_dict = {'records': array1}
     return json_dict
