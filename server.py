@@ -2,6 +2,7 @@
 from flask import Flask
 from flask import request
 from flask import jsonify
+from flask import redirect
 import json
 import backend
 
@@ -9,7 +10,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return ''' Refer to https://github.com/MARK-III/LogSystem'''
+    return redirect('https://github.com/MARK-III/LogSystem')
 
 @app.route('/body/train', methods=['POST','GET'])
 def train():
@@ -17,7 +18,7 @@ def train():
     if (request.method == 'POST'):
 	
     	header = request.headers
-    	body = request.post_body_json(force=True,silent=True)
+    	body = request.get_json(force=True,silent=True)
     	reply = backend.post_train(body)
     	return jsonify(reply)
     else:
