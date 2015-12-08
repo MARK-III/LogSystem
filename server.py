@@ -5,7 +5,6 @@ from flask import jsonify
 from flask import redirect
 from flask import url_for
 import json
-import backend
 import logbackend
 
 app = Flask(__name__)
@@ -14,15 +13,9 @@ app = Flask(__name__)
 def index():
     return redirect('https://github.com/MARK-III/LogSystem')
 
-@app.route('/body/train', methods=['POST','GET'])
-def train():
-
-    if (request.method == 'POST'):	
-	return logbackend.body_train.getResponse(request)
-    else:
-	reply = backend.get_body_train()
-	return jsonify(reply)
-	
+@app.route('/body/train', methods=['POST'])
+def post_train():
+    return logbackend.body_train.getResponse(request)
 
 @app.route('/body/records/<date>', methods=['GET'])
 def get_records(date):

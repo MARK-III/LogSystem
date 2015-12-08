@@ -13,7 +13,7 @@ created_at varchar(50)
 DROP TABLE exercise;
 
 CREATE TABLE exercise (
-uuid varchar(36),
+exercise varchar(36),
 name varchar(50),
 catalog_id varchar(36)
 );
