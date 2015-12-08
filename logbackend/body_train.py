@@ -10,6 +10,7 @@ def getResponse(request):
     body = request.get_json(force = True, silent = True)
     date = body['date']
     time = datetime.now()
+    records_list = []
     for record in body['records']:
 	
 	for i in range(0, record['groups']):
@@ -26,5 +27,14 @@ def getResponse(request):
 	    cur.execute('INSERT INTO main VALUES(?,?,?,?,?,?,?)',data)
     	    connection.commit()
     	    connection.close()
-	
-    return str(exercise)
+            record_dict = {
+                           'exercise': exercise,
+                           'catalog': catalog,
+                           'resistance': resistance,
+                           'repetition': repitation,
+                           'date': date,
+                           'uuid': uid
+                           }
+            records_list.append(record_dict)
+    result_dict = { 'records': records_list}
+    return jsonify(result_dict)

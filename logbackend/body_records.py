@@ -19,7 +19,7 @@ def getResponse(request,date):
                        'resistance': row[2],
 		       'repetition': row[3],
 		       'date': row[4],
-	               'record_id': row[5]
+	               'uuid': row[5]
 		       }
 	records_list.append(record_dict)
     result_dict = { 'records': records_list}	 
