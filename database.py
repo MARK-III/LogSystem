@@ -23,7 +23,7 @@ def catalog2uid(name):
 	uid = str(uuid1())
 	cur.execute("INSERT INTO catalog VALUES ('%s', '%s')" % (uid, name))
         connection.commit()
-	connection.clost()
+	connection.close()
 	return uid
     else:
 	return str(result[0])
@@ -50,7 +50,7 @@ def exercise2uid(name,name2):
 	uid = str(uuid1())
 	cur.execute("INSERT INTO exercise VALUES ('%s', '%s', '%s')" % (uid, name, catalog_uid))
         connection.commit()
-	connection.clost()
+	connection.close()
 	return uid
     else:
 	return str(result[0])
