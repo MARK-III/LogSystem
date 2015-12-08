@@ -77,14 +77,14 @@ Body:
 			"catalog": "背部",
 			"resistance": 30,
 			"repitation": 8,
-			"groups": 4
+			"groups": 1
 		},
 		{
 			"exercise": "硬拉",
 			"catalog": "背部",
 			"resistance": 30,
 			"repitation": 8,
-			"groups": 4
+			"groups": 1
 		}
 	]
 }
@@ -100,7 +100,6 @@ Body:
 			"catalog": "背部",
 			"resistance": 30,
 			"repitation": 8,
-			"groups": 4,
 			"date": "2015-12-03",
 			"uuid": "0dca7d12-96b1-11e5-99ca-024d03c2f759"
 		},
@@ -109,7 +108,6 @@ Body:
 			"catalog": "背部",
 			"resistance": 30,
 			"repitation": 8,
-			"groups": 4,
 			"date": "2015-12-03",
 			"uuid": "0dca7d12-96b1-11e5-99ca-024d03c2f759"
 		}
