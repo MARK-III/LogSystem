@@ -2,10 +2,10 @@
 
 Get training record(s) 
 
-**GET**`/body/train`
+**GET**`/body/records/2015-12-03`
 
 Request:  
-Header:`date : 2015-12-03`  
+Header:`?`
 Response:  
 Body:  
 ```
