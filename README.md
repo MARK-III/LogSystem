@@ -10,7 +10,7 @@ The design procedure should be database --> api --> program
     delete /body/record/<uuid>.......not yet
     delete record from database
     
-    get /body/calender........not yet
+    get /body/calender/<date>......implemented
     Fetch training calender
     
     get /body/catalog.......not yet
