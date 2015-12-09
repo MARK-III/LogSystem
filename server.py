@@ -21,6 +21,10 @@ def post_train():
 def get_records(date):
     return logbackend.body_records.getResponse(request,date)
 
+@app.route('/body/calender/<date>', methods=['GET'])
+def get_calender(date):
+    return logbackend.body_calender.getResponse(request,date)
+
 if __name__ == '__main__':
     app.debug = True
     app.run(host='192.168.0.93',port=10080)
