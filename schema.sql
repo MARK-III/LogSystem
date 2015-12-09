@@ -30,6 +30,7 @@ DROP TABLE user;
 CREATE TABLE user (
 user_id varchar(36),
 name varchar(50),
+token varchar(36),
 password string
 );
 
