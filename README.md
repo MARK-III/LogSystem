@@ -13,5 +13,5 @@ The design procedure should be database --> api --> program
     get /body/calender/<date>......implemented
     Fetch training calender
     
-    get /body/catalog.......not yet
+    get /body/catalog.......implemented
     Fetch catalog information
