@@ -25,6 +25,10 @@ def get_records(date):
 def get_calender(date):
     return logbackend.body_calender.getResponse(request,date)
 
+@app.route('/body/catalog', methods=['GET'])
+def get_catalog():
+    return logbackend.body_catalog.getResponse(request)
+
 if __name__ == '__main__':
     app.debug = True
     app.run(host='192.168.0.93',port=10080)
