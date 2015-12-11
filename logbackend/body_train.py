@@ -1,3 +1,7 @@
+#coding:utf-8
+import sys
+reload(sys)
+sys.setdefaultencoding("utf-8")
 from flask import request
 from flask import jsonify
 from flask import json
