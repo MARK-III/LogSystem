@@ -4,6 +4,7 @@ from flask import json
 from datetime import datetime
 from uuid import uuid1
 import sqlite3
+from translator import catalog2uid, exercise2uid
 
 def getResponse(request):
 
@@ -15,13 +16,15 @@ def getResponse(request):
 	
 	for i in range(0, record['groups']):
 
-            exercise = record['exercise']
 	    catalog = record['catalog']
+	    catalog_id = catalog2uid(catalog)
+            exercise = record['exercise']
+	    exercise_id = exercise2uid(exercise, catalog)
 	    resistance = record['resistance']
 	    repitation = record['repitation']
 	    uid = str(uuid1())
 	
-	    data = (uid,exercise,catalog,resistance,repitation,date,time)
+	    data = (uid,exercise_id,catalog_id,resistance,repitation,date,time)
 	    connection = sqlite3.connect('test.db')
 	    cur = connection.cursor()
 	    cur.execute('INSERT INTO main VALUES(?,?,?,?,?,?,?)',data)

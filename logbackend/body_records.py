@@ -4,6 +4,7 @@ from datetime import datetime
 from flask import request
 from flask import jsonify
 from flask import json
+from translator import uid2exercise, uid2catalog
 
 def getResponse(request,date):
    
@@ -14,8 +15,8 @@ def getResponse(request,date):
     for row in result:
 
 	record_dict = {
-		       'exercise': row[0],
-		       'catalog': row[1],
+		       'exercise': uid2exercise(row[0]),
+		       'catalog': uid2catalog(row[1]),
                        'resistance': row[2],
 		       'repetition': row[3],
 		       'date': row[4],
