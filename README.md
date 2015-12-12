@@ -7,7 +7,7 @@ The design procedure should be database --> api --> program
     get /body/records/<date>.......implemented
     Fetch records from database
     
-    delete /body/record/<uuid>.......not yet
+    delete /body/record/<uuid>.......implemented
     delete record from database
     
     get /body/calender/<date>......implemented
