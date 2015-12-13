@@ -13,7 +13,7 @@ def getResponse(request,date):
     day_set = set()
     for row in result:
 
-        day = row[0][9:10]
+        day = row[0]
 	day_set.add(day)
     day_list = list(day_set)
     result_dict = { 'days': day_list}	 
