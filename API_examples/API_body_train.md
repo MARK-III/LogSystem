@@ -7,21 +7,22 @@ Header:`?`
 Body:  
 ```
 {
-	"date": "2015-12-03",
 	"records": [
 		{
 			"exercise": "硬拉",
 			"catalog": "背部",
 			"resistance": 30,
 			"repitation": 8,
-			"groups": 1
+			"groups": 1，
+			"date": "2015-12-03"
 		},
 		{
 			"exercise": "硬拉",
 			"catalog": "背部",
 			"resistance": 30,
 			"repitation": 8,
-			"groups": 1
+			"groups": 1，
+			"date": "2015-12-03"
 		}
 	]
 }
