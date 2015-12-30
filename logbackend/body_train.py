@@ -18,7 +18,7 @@ def getResponse(request):
     records_list = []
     for record in body['records']:
 	
-	for i in range(0, record['groups']):
+	for i in range(0, int(record['groups'])):
 
 	    catalog = record['catalog']
 	    catalog_id = catalog2uid(catalog)
