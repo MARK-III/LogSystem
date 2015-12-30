@@ -25,12 +25,12 @@ def getResponse(request):
             exercise = record['exercise']
 	    exercise_id = exercise2uid(exercise, catalog)
 	    resistance = record['resistance']
-	    repetation = record['repetation']
+	    repetition = record['repetition']
 	    date = record['date']
             tagid = record['tagid']
 	    uid = str(uuid1())
 	
-	    data = (uid,exercise_id,catalog_id,resistance,repetation,date,time)
+	    data = (uid,exercise_id,catalog_id,resistance,repetition,date,time)
 	    connection = sqlite3.connect('test.db')
 	    cur = connection.cursor()
 	    cur.execute('INSERT INTO main VALUES(?,?,?,?,?,?,?)',data)
@@ -40,7 +40,7 @@ def getResponse(request):
                            'exercise': exercise,
                            'catalog': catalog,
                            'resistance': resistance,
-                           'repetition': repetation,
+                           'repetition': repetition,
                            'date': date,
                            'uuid': uid,
 			   'tagid': tagid
