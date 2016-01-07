@@ -1,5 +1,5 @@
 #### LogSystem  
-The design procedure should be database --> api --> program
+
 ####API Index
     post /body/train/........implemented
     Add records to database
