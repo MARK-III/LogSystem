@@ -9,9 +9,6 @@ import log
 
 app = Flask(__name__)
 
-@app.route('/')
-def index():
-    return redirect('https://github.com/MARK-III/LogSystem')
 
 @app.route('/body/train', methods=['POST'])
 def post_train():
